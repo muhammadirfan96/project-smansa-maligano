@@ -90,9 +90,7 @@ if (isset($_POST["login"])) {
 
                     $_SESSION["nama_kelas"] =
                         $kelas["nama_kelas"];
-
                 }
-
             }
 
 
@@ -105,23 +103,16 @@ if (isset($_POST["login"])) {
             );
 
             exit;
-
-
         } else {
 
             $error =
                 "Password salah!";
-
         }
-
-
     } else {
 
         $error =
             "Username tidak ditemukan!";
-
     }
-
 }
 
 ?>
@@ -136,8 +127,7 @@ if (isset($_POST["login"])) {
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1"
-    >
+        content="width=device-width, initial-scale=1">
 
     <title>
         Login - SMAN 1 Maligano
@@ -145,7 +135,6 @@ if (isset($_POST["login"])) {
 
 
     <style>
-
         * {
             box-sizing: border-box;
         }
@@ -166,8 +155,7 @@ if (isset($_POST["login"])) {
             padding: 35px;
             border-radius: 12px;
             box-shadow:
-                0 10px 30px
-                rgba(0,0,0,0.1);
+                0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
@@ -221,69 +209,65 @@ if (isset($_POST["login"])) {
             border-radius: 6px;
             text-align: center;
         }
-
     </style>
 
 </head>
 
 <body>
 
-<div class="login-box">
+    <div class="login-box">
 
-    <h1>SMAN 1 MALIGANO</h1>
+        <h1>SMAN 1 MALIGANO</h1>
 
-    <h2>
-        Sistem Absensi & Perpustakaan
-    </h2>
-
-
-    <?php if ($error != "") { ?>
-
-        <div class="error">
-
-            <?php
-            echo $error;
-            ?>
-
-        </div>
-
-    <?php } ?>
+        <h2>
+            Sistem Absensi & Perpustakaan
+        </h2>
 
 
-    <form method="POST">
+        <?php if ($error != "") { ?>
 
-        <label>
-            Username
-        </label>
+            <div class="error">
 
-        <input
-            type="text"
-            name="username"
-            required
-        >
+                <?php
+                echo $error;
+                ?>
 
+            </div>
 
-        <label>
-            Password
-        </label>
-
-        <input
-            type="password"
-            name="password"
-            required
-        >
+        <?php } ?>
 
 
-        <button
-            type="submit"
-            name="login"
-        >
-            Login
-        </button>
+        <form method="POST">
 
-    </form>
+            <label>
+                Username
+            </label>
 
-</div>
+            <input
+                type="text"
+                name="username"
+                required>
+
+
+            <label>
+                Password
+            </label>
+
+            <input
+                type="password"
+                name="password"
+                required>
+
+
+            <button
+                type="submit"
+                name="login">
+                Login
+            </button>
+
+        </form>
+
+    </div>
 
 </body>
 
